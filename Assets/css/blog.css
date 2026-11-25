@@ -1,0 +1,109 @@
+/* Estilos específicos para el Blog */
+
+.blog-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+    /* Forzamos a que este main ocupe todo el espacio disponible 
+       y empuje el footer hacia abajo */
+    flex: 1 0 auto; 
+    
+    /* Aseguramos que si el body es flex, este bloque se centre solo */
+    align-self: center; 
+}
+
+.blog-article h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.blog-article h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.blog-article p {
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Gris claro para lectura cómoda */
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.blog-article a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.blog-article a:hover {
+    opacity: 0.8;
+}
+
+/* Imágenes */
+.blog-article figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.blog-article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* Bloques de código y Magnet Link */
+.blog-article code {
+    background-color: var(--sidebar-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: var(--accent-color);
+}
+
+.blog-article pre {
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.blog-article pre code {
+    background-color: transparent;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Bloque de Nota */
+.blog-nota {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.blog-nota h4 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.blog-nota p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Asegurar que el footer se quede abajo en el blog */
+body.landing-body footer {
+    flex-shrink: 0;
+}
+

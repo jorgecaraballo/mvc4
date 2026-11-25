@@ -1,0 +1,20 @@
+# Configuración con credenciales
+Config/Config.php
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+Logs/*
+
+# Storage (bases de datos SQLite, archivos temporales)
+Storage/
+
+# Node modules (si los hubiera a futuro)
+node_modules/
+vendor/
+# Archivos temporales de Vim
+*.swp
+*~

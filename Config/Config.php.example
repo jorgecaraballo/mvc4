@@ -1,0 +1,22 @@
+<?php
+error_reporting(E_ALL);
+// IMPORTANTE: En producción, cambiar a false para no exponer errores internos
+ini_set('display_errors', true);
+// Zona horaria
+date_default_timezone_set('America/Caracas');
+// Podemos usar la función nativa de PHP define para definir constantes, pero lo haremos como se muestra a continuación:
+const BASE_URL = 'http://192.168.11.101:8140/';
+// Datos de conexión a Base de Datos
+const DB_HOST = 'localhost';
+const DB_NAME = 'DB_NAME';
+const DB_USER = 'DB_USER';
+const DB_PASSWORD = 'DB_PASSWORD';
+const DB_CHARSET = 'utf8mb4';
+// Datos envío de correo
+const NOMBRE_REMITENTE = 'MVC4';
+const EMAIL_REMITENTE = 'user@example.com';
+const EMAIL_PASSWORD_REMITENTE = 'email_password';
+const EMAIL_HOST = 'email_host';
+const NOMBRE_EMPRESA = NOMBRE_REMITENTE;
+const WEB_EMPRESA = BASE_URL;
+?>

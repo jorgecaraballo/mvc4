@@ -1,0 +1,20 @@
+/* Solo para centrar la tarjeta en la pantalla */
+body.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px; /* El .card base ya tiene 20px, aquí le damos un poco más */
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+}

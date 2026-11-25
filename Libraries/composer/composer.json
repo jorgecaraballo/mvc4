@@ -1,0 +1,15 @@
+{
+    "name": "jorge/composer",
+    "autoload": {
+        "psr-4": {
+            "Jorge\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jorge",
+            "email": "9386192+jorgecaraballo@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
