@@ -1,9 +1,9 @@
-/*M!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19-11.8.6-MariaDB, for debian-linux-gnu (x86_64)
+/*M!999999\- enable the sandbox mode */
+-- MariaDB dump 10.20-11.8.9-MariaDB, for debian-linux-gnu (aarch64)
 --
--- Host: localhost    Database: mvc4
+-- Host: localhost    Database: kleo
 -- ------------------------------------------------------
--- Server version	11.8.6-MariaDB-0+deb13u1 from Debian
+-- Server version	11.8.9-MariaDB-0+deb13u1 from Debian
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,8 +25,8 @@ DROP TABLE IF EXISTS `modulos`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `modulos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `modulo` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `descripcion` tinytext CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `modulo` varchar(50) NOT NULL,
+  `descripcion` tinytext NOT NULL,
   `status_id` tinyint(4) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -92,8 +92,8 @@ DROP TABLE IF EXISTS `roles`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rol` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `descripcion` tinytext CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `rol` varchar(50) NOT NULL,
+  `descripcion` tinytext NOT NULL,
   `status_id` tinyint(4) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -132,8 +132,9 @@ CREATE TABLE `usuarios` (
   `token` varchar(100) DEFAULT NULL,
   `rol_id` tinyint(11) NOT NULL,
   `status_id` tinyint(4) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_usuarios_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,4 +160,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-11-24 21:01:42
+-- Dump completed on 2026-11-27 10:16:34
